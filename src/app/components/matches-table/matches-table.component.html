@@ -1,0 +1,21 @@
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">score one</th>
+      <th scope="col">score two</th>
+      <th scope="col">Team one</th>
+      <th scope="col">Team two</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let obj of matchesTab">
+      <td> {{obj.id}}</td>
+      <td>{{obj.scoreOne}} </td>
+      <td>{{obj.scoreTwo}} </td>
+      <td>{{obj.teamOne}} </td>
+      <td>{{obj.teamTwo}} </td>
+    </tr>
+
+  </tbody>
+</table>
