@@ -1,4 +1,4 @@
-   <table class="table">
+<table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -6,15 +6,19 @@
       <th scope="col">score two</th>
       <th scope="col">Team one</th>
       <th scope="col">Team two</th>
+      <th scope="col">Result</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let obj of matchesTab">
       <td> {{obj.id}}</td>
-      <td>{{obj.scoreOne}} </td>
-      <td>{{obj.scoreTwo}} </td>
-      <td>{{obj.teamOne}} </td>
-      <td>{{obj.teamTwo}} </td>
+      <td [ngStyle]="{color:scoreColor(obj.scoreOne,obj.scoreTwo)}">{{obj.scoreOne}} </td>
+      <td [ngStyle]="{color:scoreColor(obj.scoreTwo,obj.scoreOne)}">{{obj.scoreTwo}} </td>
+      <td [ngStyle]="{color:scoreColor(obj.scoreOne,obj.scoreTwo)}">{{obj.teamOne}} </td>
+      <td [ngStyle]="{color:scoreColor(obj.scoreTwo,obj.scoreOne)}">{{obj.teamTwo}} </td>
+      <td [ngStyle]="{color:scoreColor(obj.scoreOne,obj.scoreTwo)}" >
+        {{scoreResult(obj.scoreOne,obj.scoreTwo,obj.teamOne)}} 
+      </td>
     </tr>
 
   </tbody>

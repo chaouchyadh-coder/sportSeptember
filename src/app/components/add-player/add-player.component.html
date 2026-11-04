@@ -14,23 +14,23 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7">
-            <form action="#">
+            <form #playerform="ngForm">
              
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" name="n1" class="form-control" placeholder="Name" [(ngModel)]="player.name">
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" placeholder="Age">
+                <input type="number" name="ag1"  class="form-control" placeholder="Age" [(ngModel)]="player.age">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="position">
+                <input type="text" name="pos1" class="form-control" placeholder="position" [(ngModel)]="player.position">
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" placeholder="NBR">
+                <input type="number" name="nbr1" class="form-control" placeholder="NBR" [(ngModel)]="player.nombre">
               </div>
              
               <div class="form-group">
-                <input type="submit" class="btn btn-primary py-3 px-5" value="Add Player">
+                <input type="submit" (click)="addPlayer()" class="btn btn-primary py-3 px-5" value="Add Player">
               </div>
             </form>  
           </div>

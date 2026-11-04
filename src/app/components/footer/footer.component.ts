@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+
+  ngOnInit(){
+
+console.log("footer componente initialized" );
+
+
+}
+
 }

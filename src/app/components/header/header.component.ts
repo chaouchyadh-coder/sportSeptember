@@ -18,4 +18,15 @@ calcul(a:number,b:number){
 return a + b;
 
 }
+
+ngOnInit(){
+
+console.log("Header componente initialized" );
+
+
+}
+
+
+
+
 }

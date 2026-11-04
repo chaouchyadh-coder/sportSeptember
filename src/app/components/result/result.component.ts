@@ -1,43 +1,43 @@
 import { NgStyle, NgClass } from '@angular/common';
-import { Component, Input,} from '@angular/core';
+import { Component, Input, } from '@angular/core';
 
 @Component({
   selector: 'app-result',
-  standalone:true,
+  standalone: true,
   imports: [NgStyle, NgClass],
   templateUrl: './result.component.html',
   styleUrl: './result.component.css'
 })
 export class ResultComponent {
   // obj : paramétre de resultComponet
-  @Input() obj:any = {};
+  @Input() obj: any = {};
 
-  scoreColor(a:number,b:number){
-if (a>b) {
-  return 'green';
+  scoreColor(a: number, b: number) {
+    if (a > b) {
+      return 'green';
 
-} else if (a<b) {
+    } else if (a < b) {
 
-  return 'orange';
-} else{
+      return 'orange';
+    } else {
 
-  return 'blue';
-}
-  
-}
+      return 'blue';
+    }
 
-scoreResult(a:number,b:number){
+  }
 
-if (a>b) {
-  return 'win';
+  scoreResult(a: number, b: number) {
 
-} else if (a<b) {
+    if (a > b) {
+      return 'win';
 
-  return 'loss';
-} else{
+    } else if (a < b) {
 
-  return 'draw';
-}
+      return 'loss';
+    } else {
 
-}
+      return 'draw';
+    }
+
+  }
 }
